@@ -1,0 +1,79 @@
+body 
+{
+	margin: 0 25% 10px 25%; 	/* Đặt lề cho body là 0 ở trên và dưới, 25% ở hai bên */
+	text-align: center; 		/* Căn giữa văn bản trong body */
+	width: 1500px;
+    margin: 0px auto;
+	border: solid 1px;
+}
+#logo{
+    width: 120px;
+    height: 120px;
+	float: left;
+}
+#datetime
+{
+	margin: 0;
+	padding: 0;
+	line-height: 50px; /* Set line height to 1px */
+}
+.header 
+{
+	  width: 100%;
+	  display: flex;			/* Sử dụng Flexbox để bố trí các phần tử con */
+	  flex-direction: row; 			/* Đặt hướng của các phần tử con theo hàng ngang */
+	  justify-content: space-between; 	/* Căn đều các phần tử con với khoảng cách giữa chúng */
+	  border: solid 1px; 		/* Đặt viền cho device là đường nét đứt với độ dày 1px */
+}
+ 
+.row 
+{
+	  display: flex;			/* Sử dụng Flexbox để bố trí các phần tử con */
+	  flex-direction: row; 			/* Đặt hướng của các phần tử con theo hàng ngang */
+	  justify-content: space-between; 	/* Căn đều các phần tử con với khoảng cách giữa chúng */
+}
+  
+.device {
+	  background-color: #00ff3a14; 	/* Đặt màu nền cho device với màu xanh lá cây nhạt */
+	  border: dashed 1px; 		/* Đặt viền cho device là đường nét đứt với độ dày 1px */
+	  padding: 10px;		/* Đặt khoảng cách giữa nội dung và viền cho device là 10px */
+}
+.Logo {
+	  width: 8%;
+	  background-color: #00ff3a14; 	/* Đặt màu nền cho device với màu xanh lá cây nhạt */
+	  /*border: dashed 1px; 		/* Đặt viền cho device là đường nét đứt với độ dày 1px */
+	  padding: 10px; 		/* Đặt khoảng cách giữa nội dung và viền cho device là 10px */
+}
+.Title {
+	  width: 70%;
+	  background-color: #00ff3a14; 	/* Đặt màu nền cho device với màu xanh lá cây nhạt */
+	  /*border: dashed 1px; 		/* Đặt viền cho device là đường nét đứt với độ dày 1px */
+	  padding: 10px; 		/* Đặt khoảng cách giữa nội dung và viền cho device là 10px */
+}
+.Datetime {
+	width: 22%;
+	  background-color: #00ff3a14; 	/* Đặt màu nền cho device với màu xanh lá cây nhạt */
+	  /*border: dashed 1px; 		/* Đặt viền cho device là đường nét đứt với độ dày 1px */
+	  padding: 10px; 		/* Đặt khoảng cách giữa nội dung và viền cho device là 10px */
+}
+
+.tenbaikiemtra {
+	border: solid 1px; 		/* Đặt viền cho tenbaikiemtra là đường nét liền với độ dày 1px */
+	background-color: #29e75614; 	/* Đặt màu nền cho tenbaikiemtra với màu xanh lá cây nhạt */
+	text-align: center; 		/* Căn giữa văn bản trong tenbaikiemtra */
+}
+
+.thongtin {
+	display: flex; /* Sử dụng Flexbox để bố trí các phần tử con */
+	border: solid 1px;
+}
+
+.thongtin-sv {
+	width: 100%;				/*Kích cỡ ô "thongtin-sv" chiếm 50% chiều dài hàng*/
+	background-color: #29e75614; 	/* Đặt màu nền cho tenbaikiemtra với màu xanh lá cây nhạt */
+	text-align: left;			/* Căn trái văn bản trong thongtin-sv */
+	/*border-style: none dashed none none;    /*Phần tử sẽ có viền kiểu gạch chấm ở cạnh phải và không có viền ở ba cạnh còn lại (trên, dưới, trái).
+	padding: 10px;
+	font-weight: bold; 			/* In đậm Tên và MSSV */
+}
+

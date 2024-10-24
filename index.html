@@ -1,0 +1,121 @@
+<!DOCTYPE html> <!-- Định nghĩa loại tài liệu là HTML5 -->
+<html>
+    <head>
+        <title>Smart Home</title> 							<!-- Đặt tiêu đề của trang web -->
+        <meta charset="UTF-8"> 								<!-- Đặt mã hóa ký tự là UTF-8 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 		<!-- Đảm bảo hiển thị và thu phóng đúng trên các thiết bị di động -->
+        <link rel="stylesheet" href="style.css"> 					<!-- Liên kết tới tệp CSS -->
+	<meta name="author" content="DND">
+    </head>
+
+    <body>
+		  <div class="header"> <!-- HÀNG 01 -->
+                <div class="Logo"> 
+					<img src="img\logo_ute.png" id="logo">
+                </div>
+				<div class="Title"> 
+					<h1 style="font-size: 2.5em; font-weight: bold; color: #4CAF50; text-align: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); letter-spacing: 2px; margin: 35px 0;">
+						HỆ THỐNG ĐIỀU KHIỂN NHÀ THÔNG MINH
+					</h1>                              
+                </div>
+				<div class="Datetime"> 
+					<h1 id="datetime"> </h1>
+					<script>
+						function dongho() {
+							var time = new Date();
+							var gio = time.getHours();
+							var phut = time.getMinutes();
+							var giay = time.getSeconds();
+							var ngay = time.getDate();
+							var thang = time.getMonth() + 1; // Tháng 0-11
+							var nam = time.getFullYear();
+							var thu = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"][time.getDay()];
+
+							if (gio < 10) gio = "0" + gio;
+							if (phut < 10) phut = "0" + phut;
+							if (giay < 10) giay = "0" + giay;
+							if (ngay < 10) ngay = "0" + ngay;
+							if (thang < 10) thang = "0" + thang;
+
+							document.getElementById("datetime").innerHTML = thu + ", " + ngay + "/" + thang + "/" + nam + "<br>" + "Thời gian: " + gio + ":" + phut + ":" + giay;
+
+							setTimeout(dongho, 1000);
+						};
+						dongho();
+					</script>
+                </div>
+            </div>
+<!-------------------------------------------------------->
+        <div id="container"> <!-- Thẻ div chứa các thiết bị -->
+<!-------------------------------------------------------->
+            <div class="row"> <!-- HÀNG 01 -->
+                <div class="device"> <!-- Thiết bị 01 -->
+					<img id="nd1" src="img/nhietdo.png" alt="Nhiệt độ" style="width:100%">
+                    <h1>Nhiệt độ: <span style="color: red;" id="nhietdo">chờ cập nhật</span> °C</h1>                                 
+                </div>
+
+                <div class="device"> <!-- Thiết bị 02 -->
+                   <img id="nd1" src="img/doam.png" alt="Độ ẩm" style="width:100%">
+                    <h1>Độ ẩm: <span style="color: blue;" id="doam">chờ cập nhật</span> %</h1>                               
+                </div>
+
+                <div class="device"> <!-- Thiết bị 03 -->
+                    <img id="lm" src="img/khi_gas.png" alt="Khí gas" style=" width: 100%" >
+                    <h1>Khí gas: <span style="color: orange;" id="luongmua">chờ cập nhật</span> PPM</h1>                                   
+                </div>
+            </div>
+<!-------------------------------------------------------->      
+            <div class="row"> <!-- HÀNG 02 -->
+                <div class="device"> <!-- Thiết bị 05 -->
+                    <img id="d01_img" src="./img/light_bulb_off.png" alt="img" style="width:100%"> <!-- Hình ảnh cho thiết bị 04 với chiều rộng 100% -->
+                    <h1>Đèn</h1> <!-- Tên thiết bị 05 -->
+                    <div>
+                        <button id="d01_on" style="font-size: 20px; padding: 10px 10px; width: 80px;">ON</button>
+                        <button id="d01_off" style="font-size: 20px; padding: 10px 10px; width: 80px;">OFF</button>
+                    </div>                                    
+                </div>
+
+                <div class="device"> <!-- Thiết bị 06 -->
+                    <img id="d02_img" src="./img/quat_off.png" alt="img" style="width:100%"> <!-- Hình ảnh cho thiết bị 04 với chiều rộng 100% -->
+                    <h1>Quạt</1> <!-- Tên thiết bị 06 -->
+                    <div>
+                        <button id="d02_on" style="font-size: 20px; padding: 10px 10px; width: 80px;margin-top: 25px;">ON</button>
+                        <button id="d02_off" style="font-size: 20px; padding: 10px 10px; width: 80px;margin-top: 25px;">OFF</button>
+                    </div>                                    
+                </div>
+				
+				<div class="device"> <!-- Thiết bị 05 -->
+                    <img id="d03_img" src="./img/light_bulb_off.png" alt="img" style="width:100%"> <!-- Hình ảnh cho thiết bị 04 với chiều rộng 100% -->
+                    <h1>Máy Lạnh</h1> <!-- Tên thiết bị 05 -->
+                    <div>
+                        <button id="d03_on" style="font-size: 20px; padding: 10px 10px; width: 80px;">ON</button>
+                        <button id="d03_off" style="font-size: 20px; padding: 10px 10px; width: 80px;">OFF</button>
+                    </div>                                    
+                </div>
+
+            </div>
+<!-------------------------------------------------------->
+			<div class="thongtin">
+				<div class="thongtin-sv">
+					<h1><p>Họ và tên: 	<span style="color: blue;"id="HoTenHtml">Mạch Quốc Qúi</span></p>
+					<p>MSSV: 	<span style="color: blue;"id="MSSVhtml">22661030</span></p></h1>	
+				</div>
+				<div class="thongtin-sv">
+					<h1><p>Họ và tên: 	<span style="color: blue;"id="HoTenHtml1">Nguyễn Tuấn Việt</span></p>
+					<p>MSSV: 	<span style="color: blue;"id="MSSVhtml1">22661040</span></p></h1>	
+				</div>
+				<div class="thongtin-sv">
+					<h1><p>Họ và tên: 	<span style="color: blue;"id="HoTenHtml2">Nguyễn Minh Thành</span></p>
+					<p>MSSV: 	<span style="color: blue;"id="MSSVhtml2">22661034</span></p></h1>	
+				</div>
+			</div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script> <!-- Thư viện Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> <!-- Thư viện Firebase database -->
+        <script src="control.js"></script> <!-- khai báo file JavaScript sử dụng để điều khiển bật tắt với Firebase -->
+
+    </body> 
+<h1>Phone: 0774215596</h1>
+<h1>Email: QuiMach@jabil.com</h1>
+</html>
